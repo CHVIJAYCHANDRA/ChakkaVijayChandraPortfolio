@@ -334,6 +334,11 @@ figure {
     color: rgba(0, 0, 0, 0.5);
     padding: 0 20px;
     width: 100%; }
+#colorlib-aside .sidebar-footer {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
     @media screen and (max-width: 768px) {
       #colorlib-aside .colorlib-footer {
         position: relative;
