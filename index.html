@@ -1728,13 +1728,12 @@
 		}
 
 		/* Skills section card styling */
-/* Skills section card styling */
-.colorlib-skills .row {
+.colorlib-skills .row:nth-child(2) {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.colorlib-skills .col-md-6 {
+.colorlib-skills .row:nth-child(2) .col-md-6 {
 	display: flex;
 	margin-bottom: 24px;
 }
@@ -1777,10 +1776,10 @@
 
 @media screen and (max-width: 768px) {
 
-	.colorlib-skills .col-md-6 {
-		width: 100%;
-		margin-bottom: 18px;
-	}
+.colorlib-skills .row:nth-child(2) .col-md-6 {
+	width: 100%;
+	margin-bottom: 18px;
+}
 
 	.colorlib-skills .skill-card {
 		padding: 22px 24px;
