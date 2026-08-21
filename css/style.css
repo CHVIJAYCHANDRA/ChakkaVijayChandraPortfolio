@@ -214,7 +214,7 @@ figure {
   position: relative; }
 
 #colorlib-aside {
-  padding-top: 3em;
+  padding-top: 40px;
   padding-bottom: 40px;
   float: left;
   width: 300px;
@@ -235,10 +235,10 @@ figure {
       transform: translateX(-300px);
       padding-top: 4em; } }
   #colorlib-aside .author-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -246,7 +246,7 @@ figure {
   #colorlib-aside .position {
     display: block;
     margin-bottom: 2em;
-    font-size: 12px;
+    font-size: 16px;
     text-transform: uppercase; }
   #colorlib-aside #colorlib-logo {
     text-align: right;
@@ -273,18 +273,19 @@ figure {
         #colorlib-aside #colorlib-main-menu ul {
           margin: 0 0 2em 0; } }
       #colorlib-aside #colorlib-main-menu ul li {
-        margin: 0 0 10px 0;
+        margin: 0 0 5px 0;
         padding: 0;
         list-style: none;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
         text-transform: uppercase;
-        letter-spacing: 1px; }
+        letter-spacing: 0.5px;
+        line-height: 1.4; }
         #colorlib-aside #colorlib-main-menu ul li a {
           color: rgba(0, 0, 0, 0.7);
           text-decoration: none;
           position: relative;
-          padding: 10px 0;
+          padding: 6px 0;
           font-family: "Quicksand", Arial, sans-serif;
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
@@ -362,8 +363,9 @@ figure {
             color: #2c98f0; }
 
 .container-wrap {
-  max-width: 1170px;  
-  margin: 0 auto; }
+  width: 100%;
+  max-width: none;
+  margin: 0; }
 
 #colorlib-main {
   width: calc(100% - 300px);
@@ -1033,6 +1035,13 @@ body.offcanvas {
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s; }
+    .blog-entry .blog-img {
+      aspect-ratio: 4 / 3;
+      background: #fff; }
+      .blog-entry .blog-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; }
   .blog-entry .desc h3 {
     font-size: 16px;
     margin-bottom: 25px;
@@ -1594,3 +1603,60 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+/* ================================
+   SIDEBAR VERTICAL CENTERING
+   ================================ */
+@media screen and (min-width: 769px) {
+    #colorlib-aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* ================================
+   EXPERIENCE (MODERN) — hide card triangle, Experience section only
+   ================================ */
+.experience-modern .timeline-label:after {
+    display: none;
+}
+
+/* ================================
+   EXPERIENCE (MODERN) — 11px neutral node, Experience section only
+   ================================ */
+.experience-modern .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
+    width: 11px;
+    height: 11px;
+    line-height: 0;
+    margin-left: 16px;
+    margin-top: 20px;
+    background: #c9ccd2;
+    box-shadow: none;
+}
+
+.experience-modern .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
+    display: none;
+}
+
+.experience-modern .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.is-current {
+    background: #2c98f0;
+}
+
+/* ================================
+   EXPERIENCE (MODERN) — spacing between entries + rail, Experience section only
+   ================================ */
+.experience-modern .timeline-centered .timeline-entry {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.experience-modern .timeline-centered:before {
+    width: 2px;
+    top: 24px;
+    bottom: 24px;
+}
+
+.colorlib-about .about-desc p {
+    font-size: 16px;
+}
